@@ -21,8 +21,8 @@ public class VideogamesActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.listView);
         int Layout = android.R.layout.simple_list_item_1;
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, Layout,videogames);
+        ArrayAdapter arrayAdapter = new VideogameAdapter(this, Layout,videogames);
         listView.setAdapter(arrayAdapter);
+
     }
 }
-//ghbdtnttthjr
