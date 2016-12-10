@@ -26,7 +26,7 @@ public class VideogameAdapter extends ArrayAdapter {
 
         Videogame videogame = (Videogame) getItem(position);
         ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-        Picasso.with(getContext()).load(videogame.photo).fit().into(imageView);
+        Picasso.with(getContext()).load(videogame.photo).fit().centerCrop().into(imageView);
 
 
         return view;
