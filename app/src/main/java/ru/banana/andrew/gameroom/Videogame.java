@@ -9,9 +9,9 @@ public class Videogame {
 
 
     Videogame(String description, String photo) {
-       this.description = description;
+        this.description = description;
+        this.photo = photo;
 
-       this.photo = photo;
     }
 
 
