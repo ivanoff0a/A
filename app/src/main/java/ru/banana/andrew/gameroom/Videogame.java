@@ -8,11 +8,13 @@ import java.io.Serializable;
 public class Videogame implements Serializable {
     String description;
     String photo;
+    String screenshot;
 
 
-    Videogame(String description, String photo) {
+    Videogame(String description, String photo,String screenshot) {
         this.description = description;
         this.photo = photo;
+        this.screenshot = screenshot;
     }
 
 
