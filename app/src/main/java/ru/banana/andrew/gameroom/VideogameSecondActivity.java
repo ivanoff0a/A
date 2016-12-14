@@ -1,5 +1,6 @@
 package ru.banana.andrew.gameroom;
 
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -21,11 +22,13 @@ public class VideogameSecondActivity extends AppCompatActivity {
         Picasso.with(this).load(videogames.photo).fit().centerCrop().into(imageView);
 
         ImageView imageView2 = (ImageView) findViewById(R.id.imageView3);
-        Picasso.with(this).load(videogames.photo).fit().centerCrop().into(imageView);
+        Picasso.with(this).load(videogames.screenshot).fit().centerCrop().into(imageView2);
 
 
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(videogames.description);
+
+        ImageView wikiimage = (ImageView) findViewById(R.id.imageView2);
 
     }
 }
