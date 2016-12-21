@@ -11,69 +11,61 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.banana.andrew.gameroom.VideogameSecondActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="128dp"
-        android:layout_marginTop="17dp">
+        android:layout_height="match_parent">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-            <LinearLayout
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                >
 
-                <HorizontalScrollView
-                    android:layout_width="368dp"
-                    android:layout_height="wrap_content"
-                    >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="256dp">
 
-                    <LinearLayout
-                        android:layout_width="@dimen/weightofs"
-                        android:layout_height="@dimen/heightofs"
-                        android:orientation="horizontal" >
+                    <ImageView
+                        android:layout_width="600dp"
+                        android:layout_height="256dp"
+                        android:background="@color/colorAccent"
+                        android:id="@+id/ImageView1"
+                        />
 
-                        <ImageView
-                            android:layout_width="600dp"
-                            android:layout_height="256dp"
-                            android:background="@color/colorAccent"
-                            android:id="@+id/ImageView1"
-                            />
+                    <ImageView
+                        android:layout_width="600dp"
+                        android:layout_height="256dp"
+                        android:background="@color/colorAccent"
+                        android:id="@+id/ImageView2" />
 
-                        <ImageView
-                            android:layout_width="600dp"
-                            android:layout_height="256dp"
-                            android:background="@color/colorAccent"
-                            android:id="@+id/ImageView2" />
+                    <ImageView
+                        android:layout_width="600dp"
+                        android:layout_height="256dp"
+                        android:background="@color/colorAccent"
+                        android:id="@+id/ImageView3" />
 
-                        <ImageView
-                            android:layout_width="600dp"
-                            android:layout_height="256dp"
-                            android:background="@color/colorAccent"
-                            android:id="@+id/ImageView3" />
+                </LinearLayout>
+            </HorizontalScrollView>
 
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </LinearLayout>
-        </ScrollView>
+            <TextView
+                android:text="TextView"
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="97dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
 
-    </LinearLayout>
-
-    <TextView
-        android:text="TextView"
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="105dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="97dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

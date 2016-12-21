@@ -10,14 +10,18 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VideogamesActivity">
+        <activity android:name=".VideogamesActivity" />
+        <activity
+            android:name=".OnStartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".VideogameSecondActivity"></activity>
+        <activity android:name=".VideogameSecondActivity" />
+        <activity android:name=".AboutCompanyActivity"></activity>
     </application>
 
 </manifest>
