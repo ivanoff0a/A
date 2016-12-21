@@ -3,6 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="heightofs">220dp</dimen>
-    <dimen name="weightofs">300dp</dimen>
+    <dimen name="weightofs">320dp</dimen>
 </resources>
 

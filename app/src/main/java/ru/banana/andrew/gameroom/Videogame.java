@@ -12,7 +12,6 @@ public class Videogame implements Serializable {
     String title;
     String screenshot2;
     String screenshot3;
-    String screenshot4;
 
 
     Videogame(String description, String photo,String screenshot) {
@@ -20,13 +19,12 @@ public class Videogame implements Serializable {
         this.photo = photo;
         this.screenshot = screenshot;
     }
-    Videogame(String description, String photo,String screenshot, String title, String screenshot2, String screenshot3, String screenshot4) {
+    Videogame(String description, String photo,String screenshot, String title, String screenshot2, String screenshot3) {
         this.description = description;
         this.photo = photo;
         this.screenshot = screenshot;
         this.title = title;
         this.screenshot2 = screenshot2;
         this.screenshot3 = screenshot3;
-        this.screenshot4 = screenshot4;
     }
 }
