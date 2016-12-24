@@ -62,9 +62,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true" />
 
-            <WebView
+            <VideoView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:id="@+id/videoView" />
+
         </LinearLayout>
     </ScrollView>
 

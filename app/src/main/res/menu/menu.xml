@@ -6,8 +6,8 @@
 
         <item
             android:id="@+id/sort_item"
-            app:showAsAction="always"
             android:title="О компании"
+            android:textStyle="normal"
             />
 
-     </menu>
+    </menu>
