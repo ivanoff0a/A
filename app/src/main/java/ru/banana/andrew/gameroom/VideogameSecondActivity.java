@@ -51,16 +51,10 @@ public class VideogameSecondActivity extends AppCompatActivity {
         actionBar.setTitle(videogames.title);
 
         EasyVideoPlayer player = (EasyVideoPlayer) findViewById(R.id.player);
-        ViewGroup videoPlayerContainer = (ViewGroup) findViewById(R.id.content_easy_video_player);
-        if (videogames.trailer == null) {
-            videoPlayerContainer.setVisibility(View.GONE);
-        } else {
-            videoPlayerContainer.setVisibility(View.VISIBLE);
-            player.setCallback(new EasyVideoCallback() {
-                // stub
-            });
-            player.setSource(Uri.parse(videogames.trailer));
-        }
+        player.setCallback(new EasyVideoCallback() {
+            // stub
+        });
+        player.setSource(Uri.parse(videogames.trailer));
     }
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()) {

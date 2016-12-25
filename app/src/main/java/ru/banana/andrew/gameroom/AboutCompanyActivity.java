@@ -17,8 +17,8 @@ public class AboutCompanyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_company);
 
-        //ImageView imageView = (ImageView) findViewById(R.id.ImageView2);
-        //Picasso.with(this).load(https://hh.ru/employer-tab-picture-resized/162341.png).fit().centerCrop().into(imageView2);
+        ImageView imageView2 = (ImageView) findViewById(R.id.ImageView2);
+        Picasso.with(this).load("https://hh.ru/employer-tab-picture-resized/162341.png").fit().centerCrop().into(imageView2);
 
         // заполняем активность
         // - иконку
