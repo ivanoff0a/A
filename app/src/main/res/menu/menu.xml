@@ -6,8 +6,10 @@
 
         <item
             android:id="@+id/sort_item"
+            android:icon="@mipmap/ic_eeee"
             android:title="О компании"
             android:textStyle="normal"
+            app:showAsAction="always"
             />
 
     </menu>

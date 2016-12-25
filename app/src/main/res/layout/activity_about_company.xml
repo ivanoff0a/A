@@ -11,28 +11,42 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ru.banana.andrew.gameroom.AboutCompanyActivity">
 
-    <TextView
-        android:text="Все права защищены."
-        android:layout_width="100dp"
-        android:id="@+id/textView"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="Andrew's Technologies®"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_above="@+id/textView"
-        android:layout_alignParentStart="true" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/imageView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_height="200dp" />
+
+            <TextView
+                android:text="Andrew's Technologies®"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_marginBottom="11dp"
+                android:layout_above="@+id/textView"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="Все права защищены."
+                android:layout_width="match_parent"
+                android:id="@+id/textView"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="46dp" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
