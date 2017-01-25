@@ -41,31 +41,33 @@ public class AboutCompanyActivity extends AppCompatActivity {
     }
 
     private void animateImageView() {
+        Animator.AnimatorListener listener = new Animator.AnimatorListener() {
 
+            @Override
+            public void onAnimationStart(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        };
 
         imageView.animate().setDuration(500).setStartDelay(1000)
                 .setInterpolator(new AccelerateDecelerateInterpolator())
                 .rotation(imageView.getRotation() + 90)
-                .setListener(new Animator.AnimatorListener() {
-
-                    @Override
-                    public void onAnimationStart(Animator animation) {
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        animateImageView();
-                    }
-
-                    @Override
-                    public void onAnimationCancel(Animator animation) {
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animator animation) {
-                    }
-
-                }).start();
+                .setListener(listener).start();
     }
 
 
@@ -84,23 +86,6 @@ public class AboutCompanyActivity extends AppCompatActivity {
         }
 
         return true;
-    }
-
-
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("AboutCompany Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
     }
 }
 

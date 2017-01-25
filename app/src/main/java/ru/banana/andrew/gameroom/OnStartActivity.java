@@ -1,5 +1,6 @@
 package ru.banana.andrew.gameroom;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,15 +26,23 @@ public class OnStartActivity extends AppCompatActivity {
             }
         });
         Animation start1TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-        start1TextViewAnimation.setDuration(600);
+        start1TextViewAnimation.setDuration(800);
         TextView start1TextView = (TextView) findViewById(R.id.tv);
         start1TextView.startAnimation(start1TextViewAnimation);
 
         Animation start2TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-        start2TextViewAnimation.setDuration(600);
+        start2TextViewAnimation.setDuration(800);
         start2TextViewAnimation.setStartOffset(200);
         TextView start2TextView = (TextView) findViewById(R.id.tv2);
         start2TextView.startAnimation(start2TextViewAnimation);
+
+        TextView startTV = (TextView) findViewById(R.id.tv2);
+        startTV.animate().rotation(1800).setDuration(6000).scaleX(10).scaleY(10).start();
+        TextView startTV2 = (TextView) findViewById(R.id.tv);
+        int delta = dpToPixels(this, -100);
+        startTV2.animate().rotation(1800).setDuration(6000).scaleX(5).scaleY(5).translationY(delta).start();
+
+
 
 
 
@@ -42,4 +51,10 @@ public class OnStartActivity extends AppCompatActivity {
 
 
     }
+
+    public static int dpToPixels(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
+    }
+
 }
