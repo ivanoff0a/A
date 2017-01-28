@@ -33,7 +33,7 @@ public class AboutCompanyActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.arrowleft);
+        actionBar.setHomeAsUpIndicator(R.drawable.left);
         actionBar.setTitle("О компании");
 
         imageView = (ImageView) findViewById(R.id.imageView);

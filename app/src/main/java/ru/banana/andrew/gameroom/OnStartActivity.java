@@ -2,12 +2,21 @@ package ru.banana.andrew.gameroom;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.view.animation.FastOutLinearInInterpolator;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.CycleInterpolator;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.TextView;
+
+import static android.R.id.content;
 
 public class OnStartActivity extends AppCompatActivity {
 
@@ -25,28 +34,34 @@ public class OnStartActivity extends AppCompatActivity {
                 finish();
             }
         });
-        Animation start1TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-        start1TextViewAnimation.setDuration(800);
-        TextView start1TextView = (TextView) findViewById(R.id.tv);
-        start1TextView.startAnimation(start1TextViewAnimation);
+        //Animation start1TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        //start1TextViewAnimation.setDuration(800);
+        //TextView start1TextView = (TextView) findViewById(R.id.tv);
+        //start1TextView.startAnimation(start1TextViewAnimation);
 
-        Animation start2TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
-        start2TextViewAnimation.setDuration(800);
-        start2TextViewAnimation.setStartOffset(200);
-        TextView start2TextView = (TextView) findViewById(R.id.tv2);
-        start2TextView.startAnimation(start2TextViewAnimation);
+        //Animation start2TextViewAnimation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        //start2TextViewAnimation.setDuration(800);
+        //start2TextViewAnimation.setStartOffset(200);
+        //TextView start2TextView = (TextView) findViewById(R.id.tv2);
+        //start2TextView.startAnimation(start2TextViewAnimation);
 
-        TextView startTV = (TextView) findViewById(R.id.tv2);
-        startTV.animate().rotation(1800).setDuration(6000).scaleX(10).scaleY(10).start();
-        TextView startTV2 = (TextView) findViewById(R.id.tv);
-        int delta = dpToPixels(this, -100);
-        startTV2.animate().rotation(1800).setDuration(6000).scaleX(5).scaleY(5).translationY(delta).start();
-
-
-
-
-
-
+        //TextView startTV = (TextView) findViewById(R.id.tv2);
+        //startTV.animate().rotation(360*5).setDuration(4000).scaleX(10).scaleY(10).start();
+        //TextView startTV2 = (TextView) findViewById(R.id.tv);
+        //startTV2.animate().rotation(360*5).setDuration(4000).scaleX(5).scaleY(5).translationY(delta).start();
+        //new AccelerateDecelerateInterpolator()
+        //new BounceInterpolator()
+        //new OvershootInterpolator()
+        //new CycleInterpolator()
+        //new LinearInterpolator()
+        //new FastOutSlowInInterpolator()
+        //new FastOutLinearInInterpolator()
+        TextView start1TextView = (TextView) findViewById(R.id.tv2);
+        int delta = dpToPixels(this, 513);
+        start1TextView.animate().translationY(delta).setDuration(3000).setInterpolator(new BounceInterpolator()).start();
+        TextView start2TextView = (TextView) findViewById(R.id.tv);
+        int delta2 = dpToPixels(this,454);
+        start2TextView.animate().setStartDelay(3500).alpha(300).translationY(delta2).setDuration(2000).setInterpolator(new BounceInterpolator()).start();
 
 
 
@@ -57,4 +72,12 @@ public class OnStartActivity extends AppCompatActivity {
         return (int) (dp * scale + 0.5f);
     }
 
+
+
+
+
+
 }
+
+
+

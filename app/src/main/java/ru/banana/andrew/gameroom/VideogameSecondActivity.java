@@ -47,7 +47,7 @@ public class VideogameSecondActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.arrowleft);
+        actionBar.setHomeAsUpIndicator(R.drawable.left);
         actionBar.setTitle(videogames.title);
 
         EasyVideoPlayer player = (EasyVideoPlayer) findViewById(R.id.player);
