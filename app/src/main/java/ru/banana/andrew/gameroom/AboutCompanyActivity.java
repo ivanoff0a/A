@@ -50,7 +50,7 @@ public class AboutCompanyActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animator animation) {
-
+                animateImageView();
             }
 
             @Override

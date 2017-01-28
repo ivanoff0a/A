@@ -6,6 +6,7 @@ import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
@@ -25,12 +26,24 @@ public class OnStartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_start);
 
+        try{
+        String[] strings = new String[1000000000];
+        for (int i = 0; i < 1000000000; ++i) {
+            strings[i] = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        }
+    }catch(OutOfMemoryError e){
+        Log.w("Error", e.toString());
+
+    }
+
+
+
         View bigLayout = findViewById(R.id.activity_on_start);
         bigLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(OnStartActivity.this, VideogamesActivity.class);
-            startActivity(intent);
+                Intent intent = new Intent(OnStartActivity.this, VideogamesActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -62,9 +75,6 @@ public class OnStartActivity extends AppCompatActivity {
         TextView start2TextView = (TextView) findViewById(R.id.tv);
         int delta2 = dpToPixels(this,454);
         start2TextView.animate().setStartDelay(3500).alpha(300).translationY(delta2).setDuration(2000).setInterpolator(new BounceInterpolator()).start();
-
-
-
     }
 
     public static int dpToPixels(Context context, float dp) {
