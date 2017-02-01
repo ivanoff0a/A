@@ -29,10 +29,15 @@
             android:value="@integer/google_play_services_version" />
         <receiver android:name=".MyHappyReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.ACTION_BOOT_COMPLETED" />
-
-            </intent-filter>
-        </receiver>
+            <action android:name="android.hardware.action.NEW_PICTURE" />
+            <action android:name="android.hardware.action.NEW_VIDEO" />
+            <action android:name="android.intent.action.AIRPLANE_MODE" />
+            <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            <action android:name="android.intent.action.AIRPLANE_MODE" />
+            <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+        </intent-filter>
+    </receiver>
     </application>
 
 </manifest>
